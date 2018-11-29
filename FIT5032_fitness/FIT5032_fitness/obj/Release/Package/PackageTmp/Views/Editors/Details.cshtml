@@ -1,0 +1,105 @@
+﻿@model FIT5032_fitness.Models.Editor
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .morecontent span {
+        display: none;
+    }
+
+    .morelink {
+        display: block;
+    }
+</style>
+
+<div>
+    <h4><b>@Html.DisplayFor(model => model.Title)</b></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Title
+        </dt>
+
+        <dd>
+            <b>@Html.DisplayFor(model => model.Title)</b>
+        </dd>
+        <dt>
+            Description
+        </dt>
+        <dd>
+            <span class="more">
+                @Html.DisplayFor(model => model.Description)
+            </span>
+
+        </dd>
+        <dt>
+            Image
+        </dt>
+        <dd>
+            <img class="img-thumbnail" src='@Url.Content("~/Uploads/"+ Model.path)' style="width:50%;" />
+        </dd>
+    </dl>
+</div>
+<p>
+    @if (User.IsInRole("Customer"))
+    {
+        <div>
+            @Html.ActionLink("Back to List", "MyBlog")
+        </div>
+    }
+    @if (User.IsInRole("Admin"))
+    {
+        <div>
+            @Html.ActionLink("Back to List", "BlogList")
+        </div>
+    }
+    @if (!User.IsInRole("Admin") && !User.IsInRole("Customer"))
+    {
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</p>
+
+<script>
+
+    $(document).ready(function () {
+        // Configure/customize these variables.
+        var showChar = 100;  // How many characters are shown by default
+        var ellipsestext = "...";
+        var moretext = "Show more >";
+        var lesstext = "Show less";
+
+
+        $('.more').each(function () {
+            var content = $(this).html();
+
+            if (content.length > showChar) {
+
+                var c = content.substr(0, showChar);
+                var h = content.substr(showChar, content.length - showChar);
+
+                var html = c + '<span class="moreellipses">' + ellipsestext + '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+                $(this).html(html);
+            }
+
+        });
+
+        $(".morelink").click(function () {
+            if ($(this).hasClass("less")) {
+                $(this).removeClass("less");
+                $(this).html(moretext);
+            } else {
+                $(this).addClass("less");
+                $(this).html(lesstext);
+            }
+            $(this).parent().prev().toggle();
+            $(this).prev().toggle();
+            return false;
+        });
+    });
+</script>

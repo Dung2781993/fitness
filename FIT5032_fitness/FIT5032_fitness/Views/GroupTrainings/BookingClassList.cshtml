@@ -1,0 +1,62 @@
+﻿@model IEnumerable<FIT5032_fitness.Models.GroupTraining>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+    #join-button {
+        font-size: 15px;
+        background: #b6121d;
+        padding: 8px 20px;
+        border-color: #b6121d;
+    }
+</style>
+
+
+<div class="form-horizontal">
+    <h3>Manage User Booking</h3>
+    <hr />
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["Success"]
+        </div>
+    }
+    <div id="calendar"></div>
+
+    @if (User.IsInRole("Admin"))
+    {
+        <div>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.StartDate)
+                    </th>
+                    <th></th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr class="booking">
+                        <td class="email">
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td class="start">
+                            @Html.DisplayFor(modelItem => item.StartDate)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Cancel Your Booking", "Delete", new { id = item.GroupId })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    }
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/fullcalendar")
+}

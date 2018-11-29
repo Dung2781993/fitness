@@ -1,0 +1,170 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="~/Style/flaticon.css" />
+<style>
+    .header-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    #title {
+        font-family: "Oxygen", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    h5, h3, p, li {
+        font-family: "Oxygen", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        padding-bottom: 5px;
+    }
+
+    h5, li {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .feature_item {
+        text-align: center;
+    }
+
+
+    .program-option {
+        list-style: none;
+        padding-right: 50px;
+    }
+
+    .program-title {
+        color: #b6121d;
+        padding-bottom: 10px;
+    }
+
+    #join-button {
+        font-size: 15px;
+        background: #b6121d;
+        padding: 8px 20px;
+        border-color: #b6121d;
+    }
+
+    .flaticon:before {
+        font-size: 80px;
+        line-height: 80px;
+    }
+
+    .flaticon {
+        display: inline-block;
+    }
+
+    .footer-content {
+        color: white;
+    }
+
+    #body, #footter {
+        padding-top: 30px;
+    }
+
+    #body {
+        opacity: 0.8;
+    }
+
+    @@media (max-width: 767px) {
+        .flaticon:before {
+            font-size: 60px;
+            line-height: 60px;
+        }
+    }
+</style>
+
+<section id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <img src="~/Image/Workout_Banner.jpg" class="header-photo" />
+                <div class="carousel-caption">
+                    <p id="title">
+                        Our aim is to create a friendly and comfortable environment with positive staff members and world-class equipment. As a team, we are here to share our wealth of knowledge to encourage and support every member to reach their maximum potential and well-being.
+                    </p>
+                    <a class="btn btn-primary  btn-md" href="~/Account/Register" id="join-button">JOIN THE CLUB</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="body">
+    <div class="container">
+        <h2 class="program-title">Our features classes</h2>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="feature_item">
+                    <span class="flaticon flaticon-running"></span>
+                    <h3 class="program-title">Running Programs</h3>
+                    <ul>
+                        <li class="program-option">FITNESS ASSESSMENT</li>
+                        <li class="program-option">PERSONAL TRAINING</li>
+                        <li class="program-option">SMALL GROUP TRAINING</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="feature_item">
+                    <span class="flaticon flaticon-yoga-mat"></span>
+                    <h3 class="program-title"> Cardio Programs</h3>
+                    <ul>
+                        <li class="program-option">CARDIO TVS</li>
+                        <li class="program-option">ELLIPTICAL CROSS-TRAINERS</li>
+                        <li class="program-option">EXERCISE CYCLES</li>
+                        <li class="program-option">ROWING MACHINES</li>
+                        <li class="program-option">SPIN BIKES</li>
+                        <li class="program-option">TREADMILLS</li>
+                        <li class="program-option">VERSA-CLIMBER</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="feature_item">
+                    <span class="flaticon flaticon-weightlifting"></span>
+                    <h3 class="program-title">Weight Programs</h3>
+                    <ul>
+                        <li class="program-option">BARBELLS</li>
+                        <li class="program-option">DUMBBELLS</li>
+                        <li class="program-option">PLATE LOADED</li>
+                        <li class="program-option">ROWING MACHINES</li>
+                        <li class="program-option">SQUAT RACKS</li>
+                        <li class="program-option">HEXAGON BAR</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="footter">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <img src="~/Image/footer_img.png" class="header-photo" alt="Fitness" />
+            </div>
+            <div class="col-md-6 col-xs-12" style="background-color:#b6121d;">
+                <h5 class="footer-content" style="padding-top: 15px;">Get to a healthier place at Anytime Fitness! Our friendly, professional staff is trained to help you along your fitness journey, no matter how much support you need. Membership includes a free, no-pressure fitness consultation, global access to more than 3,000 gyms, and always open 24/7 convenience. All in a welcoming club and supportive member community. Let’s get started! Visit during staffed hours or call for an appointment today!</h5>
+                <h3 class="footer-content">Staffed Hours</h3>
+                <ul>
+                    <li class="footer-content"> Monday : 9:00 am - 8:pm</li>
+                    <li class="footer-content"> Tuesday : 9:00 am - 8:pm</li>
+                    <li class="footer-content"> Wednesy : 9:00 am - 8:pm</li>
+                    <li class="footer-content"> Thursday : 9:00 am - 8:pm</li>
+                    <li class="footer-content"> Friday : 9:00 am - 8:pm</li>
+                    <li class="footer-content"> Saturday : 12 pm - 2:pm</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

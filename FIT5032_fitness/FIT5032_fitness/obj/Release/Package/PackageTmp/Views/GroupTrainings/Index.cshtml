@@ -1,0 +1,161 @@
+﻿@model IEnumerable<FIT5032_fitness.Models.GroupTraining>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    h3, h4, p , tr,td {
+        font-family: "Oxygen", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        padding-top: 10px;
+        line-height: 1.5
+    }
+
+    p, em {
+        font-size: 15px;
+    }
+
+    .table-responsive{
+        overflow-x: auto;
+        min-height: .01%;
+    }
+
+    table {
+        max-width: 100%;
+        margin-bottom: 21px;
+        border-collapse:collapse;
+        border-spacing: 0;
+    }
+    .group-fitness-table thead td{
+        background-color: #C80E18;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    td, th {
+        display: table-cell;
+        border: 1px solid #ddd;
+    }
+</style>
+<h3>SESSION DESCRIPTIONS BELOW</h3>
+
+<section id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <p>
+                    <b>Small Group Training</b>s a unique way to gain all the benefits of Personal Training but in a small group environment.
+                    Group Training is also more social, fun and affordable way to train.
+                    All sessions are structured session catered to the client’s needs and 30-40min in duration.
+                    Participants are required to warm up on Cardio Equipment 10min prior to starting time of the session.
+                    Please ensure you bring a towel and drink bottle. Payments are made to the trainer on the day or Session Card are available.
+                    Timetable is subject to change.
+                    <br />
+
+                </p>
+
+                <h4><i>All participants need to Click the link to book into a class</i></h4>
+                <a href="~/GroupTrainings/BookingClass">
+                    <img src="~/Image/Booking.png" class="header-photo" />
+                </a>
+
+                <p>
+                    <em>
+                        <i>[Limited spots available]  Max of 4 people.</i>
+                    </em>
+                    <br />
+                    Running in 4 weeks Blocks and discounted 1 on 1 sessions also available
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="body">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <p>
+                    <b>Tuesday</b> sessions at 6.30am with Ryan
+                    <br />
+                    <b>Thursday</b> sessions at 6.30pm with Josh  
+                </p>
+                <p>
+                    Sessions Including a mixture of H.I.I.T 30 min functional high intensity training, Core Abs & stretch sessions, Neurological movement sessions
+
+                    <br />
+                    Each session is tailored to meet the clients needs, so injuries and different fitness levels are catered for.
+                    Great sessions to help tone shape and burn the calories. limited spots available so book now.
+
+                    <div class="table-responsive">
+                        <table style="width:563px; height:305px; color:#000;" class="group-fitness-table">
+                            <thead>
+                                <tr>
+                                    <td>day</td>
+                                    <td>&nbsp;time</td>
+                                    <td>&nbsp;time</td>
+                                    <td>time</td>
+                                    <td>&nbsp;time</td>
+                                    <td>&nbsp;time</td>
+                                    <td>&nbsp;time</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr align="center">
+                                    <td>&nbsp;Monday</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr align="center">
+                                    <td>&nbsp;Tuesday</td>
+                                    <td>&nbsp;7am</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr align="center">
+                                    <td>&nbsp;Wednesday</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr align="center">
+                                    <td>&nbsp;Thursday</td>
+                                    <td>&nbsp;7am</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr align="center">
+                                    <td>&nbsp;Friday</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+

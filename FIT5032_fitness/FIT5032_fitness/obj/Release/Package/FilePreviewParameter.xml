@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="fit5032_assignment" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^E:\\Education\\Monash\\FIT5032-Internet\ applications\ development-\ C\#\\Assignment\\FIT5032_fitness\\FIT5032_fitness\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^E:\\Education\\Monash\\FIT5032-Internet\ applications\ development-\ C\#\\Assignment\\FIT5032_fitness\\FIT5032_fitness\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="BlogModels-Web.config Connection String" description="" value="data source=(LocalDb)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\aspnet-FIT5032_fitness-20180910072808.mdf;initial catalog=aspnet-FIT5032_fitness-20180910072808;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework" tags="">
+    <parameterEntry kind="XmlFile" scope="E:\\Education\\Monash\\FIT5032-Internet\ applications\ development-\ C\#\\Assignment\\FIT5032_fitness\\FIT5032_fitness\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BlogModels']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-FIT5032_fitness-20180910072808.mdf;Initial Catalog=aspnet-FIT5032_fitness-20180910072808;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="E:\\Education\\Monash\\FIT5032-Internet\ applications\ development-\ C\#\\Assignment\\FIT5032_fitness\\FIT5032_fitness\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="EditorModels-Web.config Connection String" description="" value="data source=(LocalDb)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\aspnet-FIT5032_fitness-20180910072808.mdf;initial catalog=aspnet-FIT5032_fitness-20180910072808;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework" tags="">
+    <parameterEntry kind="XmlFile" scope="E:\\Education\\Monash\\FIT5032-Internet\ applications\ development-\ C\#\\Assignment\\FIT5032_fitness\\FIT5032_fitness\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='EditorModels']/@connectionString" />
+  </parameter>
+  <parameter name="Entities-Web.config Connection String" description="" value="metadata=res://*/Models.BlogModels.csdl|res://*/Models.BlogModels.ssdl|res://*/Models.BlogModels.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(LocalDb)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\aspnet-FIT5032_fitness-20180910072808.mdf;initial catalog=aspnet-FIT5032_fitness-20180910072808;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="E:\\Education\\Monash\\FIT5032-Internet\ applications\ development-\ C\#\\Assignment\\FIT5032_fitness\\FIT5032_fitness\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Entities']/@connectionString" />
+  </parameter>
+  <parameter name="GroupModel-Web.config Connection String" description="" value="data source=(LocalDb)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\aspnet-FIT5032_fitness-20180910072808.mdf;initial catalog=aspnet-FIT5032_fitness-20180910072808;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework" tags="">
+    <parameterEntry kind="XmlFile" scope="E:\\Education\\Monash\\FIT5032-Internet\ applications\ development-\ C\#\\Assignment\\FIT5032_fitness\\FIT5032_fitness\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='GroupModel']/@connectionString" />
+  </parameter>
+  <parameter name="RoleModel-Web.config Connection String" description="" value="data source=(LocalDb)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\aspnet-FIT5032_fitness-20180910072808.mdf;initial catalog=aspnet-FIT5032_fitness-20180910072808;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework" tags="">
+    <parameterEntry kind="XmlFile" scope="E:\\Education\\Monash\\FIT5032-Internet\ applications\ development-\ C\#\\Assignment\\FIT5032_fitness\\FIT5032_fitness\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='RoleModel']/@connectionString" />
+  </parameter>
+</parameters>

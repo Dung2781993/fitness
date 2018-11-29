@@ -1,0 +1,97 @@
+﻿@model FIT5032_fitness.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<style>
+    .header-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 15px;
+    }
+</style>
+<h2>Join Us</h2>
+
+<section id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <img src="~/Image/join_now.jpg" class="header-photo" />
+            </div>
+        </div>
+    </div>
+</section>
+<section id="register">
+    <div class="col-md-6 col-xs-12">
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <hr />
+            @Html.ValidationSummary("", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email, new { @class = "col-md-4 col-xs-12 control-label" })
+                <div class="col-md-8 col-xs-12">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.FirstName, new { @class = "col-md-4 col-xs-12 control-label" })
+                <div class="col-md-8 col-xs-12">
+                    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.LastName, new { @class = "col-md-4 col-xs-12 control-label" })
+                <div class="col-md-8 col-xs-12">
+                    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Dob, new { @class = "col-md-4 col-xs-12 control-label" })
+                <div class="col-md-8 col-xs-12">
+                    @Html.TextBoxFor(m => m.Dob, new { @class = "form-control datepicker" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password, new { @class = "col-md-4 col-xs-12 control-label" })
+                <div class="col-md-8 col-xs-12">
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-4 col-xs-12 control-label" })
+                <div class="col-md-8 col-xs-12">
+                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-4 col-md-8">
+                    <input type="submit" class="btn btn-primary" style="background-color: #b6121d; border-color:#b6121d; color:white;" value="Register" />
+                </div>
+            </div>
+
+        }
+    </div>
+
+    <div class="col-md-6 col-xs-12">
+        <h3 style="color:#b6121d;">EASY AS 1,2,3</h3>
+        <p>
+            No matter what your health and wellness goals are, Snap Fitness is here to help you achieve them. With 24/7 access to high quality equipment and world-class support, we are confident you'll love what you find at our clubs.
+        </p>
+        <p>
+            Ready to join Snap Fitness? Great! Enrolling online is easy. Below you will see our standard membership rates. Our club has additional membership options available. For more information on these results-driven memberships, contact us or stop in during staffed hours.
+        </p>
+    </div>
+</section>>
+<script type="text/javascript">
+    $('.datepicker').datepicker(
+        {
+            format: 'dd/mm/yyyy',
+            autoclose: true
+        });
+    $("input[data-val-date]").removeAttr("data-val-date");
+</script>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="E:\Education\Monash\FIT5032-Internet applications development- C#\Assignment\FIT5032_fitness\FIT5032_fitness\obj\Release\Package\PackageTmp" />
+  <setAcl path="E:\Education\Monash\FIT5032-Internet applications development- C#\Assignment\FIT5032_fitness\FIT5032_fitness\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="E:\Education\Monash\FIT5032-Internet applications development- C#\Assignment\FIT5032_fitness\FIT5032_fitness\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>
